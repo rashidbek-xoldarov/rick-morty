@@ -2,7 +2,6 @@ import React from "react";
 import CardItem from "./CardItem";
 
 const CardList = ({ data }) => {
-  console.log(Object.keys(data).includes("results"));
   return (
     <>
       {Object.keys(data).includes("results") ? (

@@ -3,30 +3,31 @@ import EpisodeFilter from "../../components/EpisodeFilter/EpisodeFilter";
 
 const Episode = () => {
   const [data, setData] = useState([]);
-  const [listEpisode, setListEpisode] = useState([]);
-  const [id, setId] = useState(1);
+  // const [listEpisode, setListEpisode] = useState([]);
+  // const [id, setId] = useState(1);
 
-  useEffect(() => {
-    (async function () {
-      const response = await fetch(
-        "https://rickandmortyapi.com/api/episode/" + id,
-      );
-      const data = await response.json();
-      // setData(data);
+  // useEffect(() => {
+  //   (async function () {
+  //     const response = await fetch(
+  //       "https://rickandmortyapi.com/api/episode/" + id,
+  //     );
+  //     const data = await response.json();
+  //     // setData(data);
 
-      const a = await data.characters[6];
-      const b = await fetch(a)
-        .then((res) => res.json())
-        .then((data) => data);
-      console.log(b);
+  //     // const a = await data.characters[6];
+  //     // const b = await fetch(a)
+  //     //   .then((res) => res.json())
+  //     //   .then((data) => data);
+  //     // console.log(b);
 
-      // const listEpisode = await data.characters.map((item) =>
-      //   fetch(item)
-      //     .then((res) => res.json)
-      //     .then((data) => console.log(data)),
-      // );
-    })();
-  }, []);
+  //     const listEpisode = await data.characters.map((item) => {
+  //       const a = await fetch(item)
+  //       .then((res) => res.json())
+  //       .then((data) => data)
+  //     });
+  //     // console.log(listEpisode);
+  //   })();
+  // }, []);
 
   return (
     <div className="container mx-auto">

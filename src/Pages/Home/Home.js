@@ -35,7 +35,11 @@ const Home = () => {
           />
         </div>
         <div className="col-9">
-          <CardList data={data} />
+          {Object.keys(data).includes("results") ? (
+            <CardList data={data.results} />
+          ) : (
+            <p>Sorry... </p>
+          )}
           <Pagination page={data?.info?.pages} setActivePage={setActivePage} />
         </div>
       </div>
